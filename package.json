@@ -1,8 +1,7 @@
 {
-  "name": "fluid-inbox",
+  "name": "google-inbox-fluid-userscript",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Gives you a multiuser (across tabs) unread count on the dock",
   "scripts": {
     "build": "browserify src/inbox.ts -p [ tsify --noImplicitAny ] | uglifyjs --compress --mangle > dist/inbox.js",
     "dev": "watchify src/inbox.ts -p [ tsify --noImplicitAny ] -o 'uglifyjs --compress --mangle > dist/inbox.js'",
@@ -14,21 +13,18 @@
     "type": "git",
     "url": "git+https://github.com/danreeves/google-inbox-fluid-userscript.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Dan Reeves <hey@danreev.es>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/danreeves/google-inbox-fluid-userscript/issues"
   },
   "homepage": "https://github.com/danreeves/google-inbox-fluid-userscript#readme",
-  "dependencies": {
+  "devDependencies": {
     "browserify": "^14.3.0",
     "tsify": "^3.0.1",
     "typescript": "^2.3.2",
     "uglify-es": "^3.0.5",
-    "watchify": "^3.9.0"
-  },
-  "devDependencies": {
+    "watchify": "^3.9.0",
     "weallbehave": "^1.2.0",
     "weallcontribute": "^1.0.8"
   }
