@@ -1,0 +1,35 @@
+{
+  "name": "fluid-inbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify src/inbox.ts -p [ tsify --noImplicitAny ] | uglifyjs --compress --mangle > dist/inbox.js",
+    "dev": "watchify src/inbox.ts -p [ tsify --noImplicitAny ] -o 'uglifyjs --compress --mangle > dist/inbox.js'",
+    "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'",
+    "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danreeves/google-inbox-fluid-userscript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danreeves/google-inbox-fluid-userscript/issues"
+  },
+  "homepage": "https://github.com/danreeves/google-inbox-fluid-userscript#readme",
+  "dependencies": {
+    "browserify": "^14.3.0",
+    "tsify": "^3.0.1",
+    "typescript": "^2.3.2",
+    "uglify-es": "^3.0.5",
+    "watchify": "^3.9.0"
+  },
+  "devDependencies": {
+    "weallbehave": "^1.2.0",
+    "weallcontribute": "^1.0.8"
+  }
+}
